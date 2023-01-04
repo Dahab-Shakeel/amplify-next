@@ -10,18 +10,18 @@ const setOption = (token, method) => {
 };
 
 export const getAllPatient = async (token) => {
-  const res = await fetch(`http://localhost:3000/api/fhir/patient`, setOption(token, "get"));
+  const res = await fetch(`https://main.d20k9trxfapyd1.amplifyapp.com/api/fhir/patient`, setOption(token, "get"));
   return res;
 };
 
 export const getAllPractitioner = async (token) => {
-  const res = await fetch(`http://localhost:3000/api/fhir/practitioner`, setOption(token, "get"));
+  const res = await fetch(`https://main.d20k9trxfapyd1.amplifyapp.com/api/fhir/practitioner`, setOption(token, "get"));
   return res;
 };
 
 export const getPatientById = async (token, patientId) => {
   const res = await fetch(
-    `http://localhost:3000/api/fhir/patient/${patientId}`,
+    `https://main.d20k9trxfapyd1.amplifyapp.com/api/fhir/patient/${patientId}`,
     setOption(token, "get")
   );
   return res;
@@ -29,14 +29,14 @@ export const getPatientById = async (token, patientId) => {
 
 export const getPractitionerById = async (token, practitionerId) => {
   const res = await fetch(
-    `http://localhost:3000/api/fhir/practitioner/${practitionerId}`,
+    `https://main.d20k9trxfapyd1.amplifyapp.com/api/fhir/practitioner/${practitionerId}`,
     setOption(token, "get")
   );
   return res;
 };
 
 export const editPatientInfo = async (token, data) => {
-  const res = await fetch(`http://localhost:3000/api/fhir/patient`, {
+  const res = await fetch(`https://main.d20k9trxfapyd1.amplifyapp.com/api/fhir/patient`, {
     ...setOption(token, "put"),
     body: JSON.stringify(data),
   });
@@ -44,7 +44,7 @@ export const editPatientInfo = async (token, data) => {
 };
 
 export const editPractitionerInfo = async (token, data) => {
-  const res = await fetch(`http://localhost:3000/api/fhir/practitioner`, {
+  const res = await fetch(`https://main.d20k9trxfapyd1.amplifyapp.com/api/fhir/practitioner`, {
     ...setOption(token, "put"),
     body: JSON.stringify(data),
   });
@@ -52,7 +52,7 @@ export const editPractitionerInfo = async (token, data) => {
 };
 
 export const addPatient = async (token, data) => {
-  const res = await fetch(`http://localhost:3000/api/fhir/patient`, {
+  const res = await fetch(`https://main.d20k9trxfapyd1.amplifyapp.com/api/fhir/patient`, {
     ...setOption(token, "put"),
     body: JSON.stringify(data),
   });
@@ -60,7 +60,7 @@ export const addPatient = async (token, data) => {
 };
 
 export const addPractitioner = async (token, data) => {
-  const res = await fetch(`http://localhost:3000/api/fhir/practitioner`, {
+  const res = await fetch(`https://main.d20k9trxfapyd1.amplifyapp.com/api/fhir/practitioner`, {
     ...setOption(token, "put"),
     body: JSON.stringify(data),
   });
