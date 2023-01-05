@@ -6,8 +6,8 @@ const awsExports = {
     oauth: {
       domain: "auth.admin.dev.andromeda.sibel.health",
       scope: ["email", "openid"],
-      redirectSignIn: "https://main.d20k9trxfapyd1.amplifyapp.com/",
-      redirectSignOut: "https://main.d20k9trxfapyd1.amplifyapp.com/",
+      redirectSignIn: process.env.NEXT_PUBLIC_API_URL,
+      redirectSignOut: process.env.NEXT_PUBLIC_API_URL,
       responseType: "token",
     },
     federationTarget: "COGNITO_USER_POOLS",
